@@ -25,3 +25,19 @@ h3 {
     letter-spacing: 2.5px;
     font-size: 14px;
 }
+
+button {
+    cursor: pointer;
+    background-color: gray;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 17px 29px;
+    &:hover {
+        background-color: #a3a1a1;
+    }
+    
+}
