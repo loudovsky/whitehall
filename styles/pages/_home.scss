@@ -135,3 +135,67 @@
     
 }
 
+.tailored {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    .bloc {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        .up {
+            background-position: center;
+            background-size: cover;
+            height: 700px;
+        }   
+        .down {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 100px;
+            h1 {
+                font-size: 28px;
+                margin: 40px 0 0;
+            }
+            p {
+                line-height: 1.5;
+                text-align: center;
+                margin: 15px 0 10px;
+                font-size: 15px;
+            }
+            .underlined {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap:10px;
+                p {
+                    color: #808080;
+                    font-size: 16px;
+                }
+                a {
+                    text-decoration: none;
+
+                    h3 {
+                        text-decoration: underline;
+                        text-decoration-color: #00000000;
+                        text-decoration-thickness:1.5px;
+                        text-underline-offset: 0.6rem;
+                        @include transition;
+
+                        &:hover {
+                            text-decoration-color: #808080 ;
+                            @include transition;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bloc:nth-of-type(1) .up {
+        background-image: url(../images/maddy_660x699_crop_center.webp);
+    }
+    .bloc:nth-of-type(2) .up {
+        background-image: url(../images/WHITEHALL_VINEYARD_PEOPLE_49_660x699_crop_center.webp);   
+    }
+}
