@@ -1,0 +1,96 @@
+.main-home {
+
+    margin-top: 170px;
+
+    .vineyard {
+        width: 100%;
+        height: 607px;
+        background: url(../images/hero-vines_1920x700_crop_center.jpg) center/cover;
+        display: flex;
+        flex-direction: column;
+        justify-content:  center;
+        align-items: center;
+        position: relative;
+
+        h3 {
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            font-size: 14px;
+            cursor: default;
+            z-index: 1;
+           
+            
+        }
+
+        h1 {
+            color: #fff;
+            margin: 10px 0;
+            font-size: 45px;
+            z-index: 1;
+            letter-spacing: 2px;
+        }
+        &::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: #0000002d;
+
+        }
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 450px;
+        gap: 2.2rem;
+        h1 {
+            font-size: 24px;
+            text-decoration: underline;
+            text-decoration-color: #00000000;
+            text-underline-offset: 0.6rem;
+            @include transition;
+        }
+        .img {
+            height: 400px;
+            background-position: center;
+            background-size: 105%;
+            background-repeat: no-repeat;
+            @include transition;
+        }
+        .case {
+            cursor: pointer;
+        }
+        .case:nth-of-type(1) .img {
+            background-image: url(../images/clubimage_500x_crop_center.png);
+            
+        }
+        .case:nth-of-type(2) .img {
+            background-image: url(../images/news_500x_crop_center.png);
+        }
+        .case:nth-of-type(3) .img {
+            background-image: url(../images/abut_500x_crop_center.png);
+        }
+        .case:nth-of-type(4) .img {
+            background-image: url(../images/theweine_500x_crop_center.png);
+        }
+
+        .case:hover {
+            h1 {
+            text-decoration-color: #000;
+            @include transition;
+            }
+            .img {
+                background-size: 112%;
+                @include transition;
+            }
+        }
+    }
+}
+.titles {
+    margin-top: 50px;
+    text-align: center;
+}
+
