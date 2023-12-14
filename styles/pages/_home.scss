@@ -145,8 +145,14 @@
         justify-content: flex-start;
         .up {
             background-position: center;
-            background-size: cover;
+            background-size: 100%;
+            background-repeat: no-repeat;
             height: 700px;
+            @include transition;
+            &:hover {
+                background-size: 105%;
+                @include transition;
+            }
         }   
         .down {
             display: flex;
@@ -171,17 +177,21 @@
             gap:10px;
                 p {
                     color: #808080;
-                    font-size: 16px;
+                    font-size: 12px;
+                    margin: 0;
+                    vertical-align: center;
                 }
                 a {
                     text-decoration: none;
+                    vertical-align: center;
 
                     h3 {
                         text-decoration: underline;
                         text-decoration-color: #00000000;
-                        text-decoration-thickness:1.5px;
+                        text-decoration-thickness:1.25 px;
                         text-underline-offset: 0.6rem;
                         @include transition;
+                        margin: 0;
 
                         &:hover {
                             text-decoration-color: #808080 ;
@@ -198,4 +208,75 @@
     .bloc:nth-of-type(2) .up {
         background-image: url(../images/WHITEHALL_VINEYARD_PEOPLE_49_660x699_crop_center.webp);   
     }
+}
+
+.grapevine {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    .img {
+            background-position: center;
+            background-size: 107%;
+            background-repeat: no-repeat;
+            height: 300px;
+            display: block;
+            @include transition;
+            &:hover {
+                background-size: 115%;
+                @include transition;
+            }
+    }
+    a {
+        text-decoration: none;
+    }
+    a:nth-of-type(2)
+    {
+       
+        h3 {
+            text-decoration: none;
+            margin: 30px 0 10px;
+            span {
+                font-weight: 300;
+                font-size: 15px;
+            }
+        }
+    }
+    h1 {
+        font-size: 22px;
+        height: 83px;
+    }
+    h3 {
+        text-decoration: underline;
+        text-decoration-color: #f6070700;
+        text-decoration-thickness:1.25 px;
+        text-underline-offset: 0.4rem;
+        @include transition;
+        margin: 0;
+        font-size: 12px;
+        font-weight: 400;
+
+        &:hover {
+            text-decoration-color: gray;
+            @include transition;
+        }
+    }
+    p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .case:nth-of-type(1) .img {
+        background-image: url(../images/Screenshot_2023-06-26_at_15.19.11_400x.webp);
+    }
+    .case:nth-of-type(2) .img {
+        background-image: url(../images/Screenshot_2023-06-26_at_15.33.48_400x.webp);
+    }
+    .case:nth-of-type(3) .img {
+        background-image: url(../images/E-Voucher_SQ_New-min-1499x1578_400x.webp);
+    }
+}
+
+.bottom-button {
+    margin: 40px 0;
+    text-align: center;
 }
